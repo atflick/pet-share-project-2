@@ -1,0 +1,10 @@
+<section>
+  <div>
+    <h4>Name: <%= @pet.name %></h4>
+    <h4>Type: <%= @pet.pet_type %></h4>
+    <h4>Age: <%= @pet.birth_date %></h4>
+    <h4>Description:</h4>
+    <p><%= @pet.description %></p>
+    <%= link_to "Edit Pet", edit_pet_path(pet) %>
+  </div>
+</section>

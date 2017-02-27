@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: "landings#welcome"
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
+
+  get "users/:id", :to =>  "users#show"
+  get "landings/changes", :to =>  "landings#changes"
+  resources :reservations
+  resources :ratings
+  resources :pets, except: [:index]
 end
