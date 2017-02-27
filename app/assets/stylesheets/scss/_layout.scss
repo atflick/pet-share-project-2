@@ -5,6 +5,18 @@ $screen-sm-min:           768px  !default;
 $screen-md-min:           992px  !default;
 $screen-lg-min:           1200px !default;
 
+// Font sizes
+$small:                   14px;
+$norm:                    16px; // base-font-size
+$med:                     18px;
+$large:                   20px;
+$larger:                  24px;
+$xlarge:                  28px;
+$xxlarge:                 32px;
+$xxxlarge:                36px;
+$xxxxlarge:               42px;
+$xxxxxlarge:              48px;
+
 // Flex layouts
 .flex-container {
   width: 100%;

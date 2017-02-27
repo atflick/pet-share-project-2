@@ -26,7 +26,7 @@ class PetsController < ApplicationController
   def destroy
     @pet = Pet.find(params[:id])
     @pet.destroy
-    redirect_to pets_path
+    redirect_to "/users/#{current_user.id}"
   end
 
   private

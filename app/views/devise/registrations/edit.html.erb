@@ -34,7 +34,7 @@
     <%= f.label :profile_pic_url %>
     <%= f.text_field :profile_pic_url %>
 
-    <!-- need phone number formatting -->
+    <!-- need phone number masking -->
     <%= f.label :phone %>
     <%= telephone_field :user, :phone %>
 
@@ -47,14 +47,13 @@
     <%= f.label :state %>
     <%= f.select :state, User::STATES %>
 
-    <!-- format to 5 digit number -->
+    <!-- mask to 5 digit number -->
     <%= f.label :zip_code %>
-    <%= f.number_field :zip_code, in: 1..99999 %>
+    <%= f.text_field :zip_code %>
 
     <%= f.label :bio %>
     <%= f.text_area :bio %>
 
-    <!-- need a drop down -->
     <%= f.label "User Type" %>
     <%= f.select :user_type, User::USER_TYPES %>
 
