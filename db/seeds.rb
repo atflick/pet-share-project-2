@@ -9,7 +9,7 @@
 
 
 pets = Pet.create ([
-  {name: "Gordy", pet_type: "Choco Lab", birth_date: "10/17/2010", user_id: 1, description: "Big boy who is a big baby, snuggle bug, goofball"},
-  {name: "Winston", pet_type: "Bulldog", birth_date: "10/17/2010", user_id: 1, description: "Fatboy, agressive and lazy"},
-  {name: "Sammy", pet_type: "Dumpster kitty", birth_date: "10/17/2010", user_id: 1, description: "Fat cat, found in a dumpster.  Evil at times."}
+  {name: "Gordy", pet_type: "Choco Lab", birth_date: "10-17-2010", user_id: 1, description: "Big boy who is a big baby, snuggle bug, goofball"},
+  {name: "Winston", pet_type: "Bulldog", birth_date: "11-15-2000", user_id: 1, description: "Fatboy, agressive and lazy"},
+  {name: "Sammy", pet_type: "Dumpster kitty", birth_date: "1-17-2011", user_id: 1, description: "Fat cat, found in a dumpster.  Evil at times."}
   ])

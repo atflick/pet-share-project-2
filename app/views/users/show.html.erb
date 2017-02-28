@@ -10,8 +10,7 @@
       <h4>Email: <%= @user.email%></h4>
       <h4>Phone: <%= @user.phone%></h4>
       <h4>Address: <%= "#{@user.address}, #{@user.city}, #{@user.state} #{@user.zip_code}"%></h4>
-      <h4>Bio:</h4>
-      <p><%= @user.bio%></p>
+      <p>Bio: <%= @user.bio%></p>
 
       <%= link_to "Edit Profile", edit_user_registration_path %>
     </div>
@@ -22,11 +21,12 @@
         <h4>Name: <%= pet.name %></h4>
         <h4>Type: <%= pet.pet_type %></h4>
         <h4>Age: <%= pet.age %></h4>
-        <h4>Description:</h4>
-        <p><%= pet.description %></p>
+        <p>Description: <%= pet.description %></p>
         <%= link_to "Edit Pet", edit_pet_path(pet) %>
       </div>
       <% end %>
+
+      <%= link_to "Add Pet", new_pet_path %>
     </div>
   </div>
 </section>

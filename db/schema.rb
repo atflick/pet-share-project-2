@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20170226152916) do
     t.date     "res_date"
     t.time     "res_time"
     t.string   "res_type"
+    t.datetime "start_time"
     t.integer  "created_by"
     t.integer  "filled_by"
     t.string   "details"

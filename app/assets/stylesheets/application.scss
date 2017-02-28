@@ -1,3 +1,15 @@
  @import "scss/layout";
  @import "scss/styles";
  @import "scss/profile";
+ @import "scss/calendar";
+ @import "scss/nav";
+
+ @font-face {
+   font-family: "Arimo";
+   src: font-url("Arimo-Regular.ttf") format("truetype");
+ }
+
+ @font-face {
+   font-family: "Pacifico";
+   src: font-url("Pacifico-Regular.ttf") format("truetype");
+ }

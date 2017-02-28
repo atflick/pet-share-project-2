@@ -2,6 +2,9 @@
 $color-1: #00ff7b; // light green
 $color-2: #284838; // dark green
 $color-3: #dbebe3; // light green gray
+$light-gray: rgba(220, 220, 220, 0.8);
+
+$body-font: "Arimo";
 
 * {
   margin: 0;
@@ -17,30 +20,9 @@ main {
 }
 
 body {
-  font-family: tahoma;
+  font-family: $body-font;
   // background: url(space-bg.jpg) fixed center;
   background-size: cover;
-}
-
-nav {
-  background: $color-3;
-  width: 100%;
-  height: 100px;
-  position: fixed;
-  text-align: center;
-}
-
-nav a {
-  line-height: 100px;
-  font-size: 30px;
-  font-family: tahoma;
-  text-decoration: none;
-  margin-right: 20px;
-  color: $color-2;
-}
-
-nav a:hover {
-  color: $color-1;
 }
 
 main a {
@@ -54,8 +36,13 @@ section {
   padding: 20px 15px;
 }
 
+h1 {
+  font-family: "Pacifico";
+  font-size: $xxxlarge;
+}
+
 h2 {
-  font-family: tahoma;
+  font-family: $body-font;
   text-align: center;
   background: rgba(200,200,200, .8);
   max-width: 800px;
@@ -70,11 +57,11 @@ h2 {
 .form input {
   width: 100%;
   display: block;
-  color: $color-1;
+  color: #000;
   background: rgba(240, 240, 240, 0.1);
   padding: 5px;
   border: 1px solid $color-1;
-  font-family: tahoma;
+  font-family: $body-font;
   font-size: 14px;
 }
 
@@ -82,18 +69,16 @@ h2 {
   display: block;
   margin-top: 10px;
   font-size: 18px;
-
-
 }
+
 .form textarea {
-  font-family: tahoma;
+  font-family: $body-font;
   width: 100%;
   height: 80px;
   display: block;
-  color: black;
+  color: #000;
   background: rgba(240, 240, 240, 0.1);
   border: 1px solid $color-1;
-  color: $color-1;
   padding: 5px;
   font-size: 14px;
 }
@@ -104,7 +89,7 @@ input[type=submit], .changes a {
   width: 40%;
   margin: 20px auto;
   color: $color-2;
-  font-family: tahoma;
+  font-family: $body-font;
   font-size: 18px;
   cursor: pointer;
   border: 1px solid $color-1;

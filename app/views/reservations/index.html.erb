@@ -1,0 +1,11 @@
+<%= month_calendar events: @reservations do |date, reservations|%>
+  <%= link_to date.day, "/reservations/new?date=#{date}" %>
+
+
+  <% reservations.each do |reservation| %>
+  <div>
+    <%=link_to User.find(reservation.created_by).name_init, reservation_path(reservation.id) %>
+  </div>
+  <% end %>
+
+<% end %>

@@ -18,4 +18,20 @@ $(document).ready(function() {
     $(".pet-profiles").addClass("active");
   })
 
+  // Navigation
+
+  $(".hamburger").click(function(){
+    $(".one").toggleClass("one-a");
+    $(".two").toggleClass("two-a");
+    $(".three").toggleClass("three-a");
+    $(".side-nav").toggleClass("open-nav");
+  })
+
+  $("main").click(function(){
+    $(".side-nav").removeClass("open-nav");
+    $(".one").removeClass("one-a");
+    $(".two").removeClass("two-a");
+    $(".three").removeClass("three-a");
+  })
+
 });

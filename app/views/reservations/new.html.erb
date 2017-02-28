@@ -1,0 +1,22 @@
+<h2>Create New Reservation</h2>
+<section>
+  <div class="form">
+    <%= form_for @reservation do |f| %>
+    <%= f.label "Date" %>
+    <%= f.date_field :res_date, :value => params[:date] %>
+
+    <%= f.label "Time" %>
+    <%= f.time_field :res_time %>
+
+    <%= f.label "Reservation Type" %>
+    <%= f.select(:res_type, Reservation::RES_TYPES) %>
+
+    <%= f.label :details %>
+    <%= f.text_area :details %>
+
+    <%= f.hidden_field :created_by, :value => current_user.id %>
+
+    <%= f.submit "Add"%>
+    <% end %>
+  </div>
+</section>

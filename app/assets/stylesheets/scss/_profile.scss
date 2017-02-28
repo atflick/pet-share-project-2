@@ -8,13 +8,15 @@
     font-size: $xlarge;
   }
   h2 {
+    color: #fff;
+    font-weight: bold;
     height: 100%;
     padding: 0;
     line-height: 30px;
     float: left;
     width: 49.8%;
     text-align: center;
-    background: $color-1;
+    background: $color-2;
     cursor: pointer;
     @media (min-width: $screen-xs-min) {
       line-height: 50px;
@@ -27,6 +29,11 @@
 
 .pet-profiles, .user-profile {
   display: none;
+}
+
+.active-header {
+  background-color: $light-gray !important;
+  color: $color-2 !important;
 }
 
 .active {

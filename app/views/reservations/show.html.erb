@@ -1,0 +1,23 @@
+<section>
+  <div>
+    <h4>Date: <%= @reservation.res_date.strftime("%A %B %d, %Y") %></h4>
+    <h4>Time: <%= @reservation.res_time.strftime("%I:%M %p") %></h4>
+    <h4>Type: <%= @reservation.res_type %></h4>
+    <h4>Created By: <%= User.find(@reservation.created_by).name_init %></h4>
+    <h4>Who's caring: <%= @reservation.filled_by ? User.find(@reservation.filled_by).name_init : "No one yet" %></h4>
+    <p>Details: <%= @reservation.details %></p>
+    <% if current_user.id == @reservation.created_by %>
+      <%= link_to "Update", edit_reservation_path(@reservation) %>
+    <% elsif current_user.id == @reservation.filled_by %>
+      <%= form_for @reservation do |f| %>
+      <%= f.hidden_field :filled_by, :value => nil %>
+      <%= f.submit "Cancel"%>
+    <% end %>
+    <% else %>
+      <%= form_for @reservation do |f| %>
+      <%= f.hidden_field :filled_by, :value => current_user.id %>
+      <%= f.submit "Sign up!"%>
+      <% end %>
+    <% end %>
+  </div>
+</section>
