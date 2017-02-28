@@ -1,0 +1,22 @@
+<h2>Welcome!</h2>
+
+<% if !current_user %>
+<section>
+  <p>Pet, Care, Share is a place where you and others can organize care for your furry friends.  Let's say you have to stay at work late and need someone to walk and feed your pet.  All you have to do is login and create an entry on the schedule with the details of what you need.  Others can then login to check the calendar and see where they may be able to help you out.  You can have multiple pets, include pictures and descriptions and even rate fellow dog walkers on how well they did.  Sign up now to start caring for pets and/or sharing your own pet!</p>
+  <div class="flex-cell-full center">
+    <%= link_to "Sign up", new_user_registration_path, class: "btn" %>
+    <%= link_to "Sign in", new_user_session_path, class: "btn"  %>
+  </div>
+</section>
+<% else %>
+<section class="center">
+  <h4><span>Get Started:</span></h4>
+    <ul>
+      <li>Click the menu icon in the top left corner for options</li>
+      <li>Go to the schedule to see outstanding reservations or create your own by click on a day number.</li>
+      <li>Add your pets through your profile or update your info</li>
+    </ul>
+</section>
+
+
+<% end %>

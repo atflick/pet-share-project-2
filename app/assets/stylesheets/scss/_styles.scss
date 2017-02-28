@@ -42,6 +42,9 @@ section {
 h1 {
   font-family: "Pacifico";
   font-size: $xxxlarge;
+  a {
+    text-decoration: none;
+  }
 }
 
 h2 {
@@ -67,9 +70,9 @@ h4, p {
 .form {
   width: 50%;
   margin: 0 auto;
-  text-align: center;
+
 }
-.form input{
+.form input {
   width: 100%;
   display: block;
   color: #000;
@@ -118,7 +121,7 @@ textarea:focus, input:focus {
 input[type=submit], .changes a {
   transition: all ease .4s;
   padding: 5px 10px;
-  width: 40%;
+  width: 45%;
   margin: 20px auto;
   color: $color-2;
   font-family: $body-font;
@@ -131,7 +134,6 @@ input[type=submit]:hover, .changes a:hover {
   background-color: $color-2;
   color: #fff;
 }
-
 
 .show-row {
   div:nth-child(1) {
@@ -185,4 +187,36 @@ input[type=submit]:hover, .changes a:hover {
   margin-left: 12px;
   font-size: $norm;
   max-width: 60px;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background-color: rgba(240, 240, 240, 0.1);
+  border: 1px solid $color-2;
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(240, 240, 240, 0.1) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+i, em {
+  font-size: $small;
+  text-align: left;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+ul {
+  padding-left: 20px;
+  text-align: left;
 }
