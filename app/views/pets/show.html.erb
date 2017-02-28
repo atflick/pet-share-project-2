@@ -1,11 +1,17 @@
 <section>
-  <div>
-    <h4>Name: <%= @pet.name %></h4>
-    <h4>Type: <%= @pet.pet_type %></h4>
-    <h4>Age: <%= @pet.age %></h4>
-    <h4>Description:</h4>
-    <p><%= @pet.description %></p>
-    <%= link_to "Edit Pet", edit_pet_path(@pet) %>
-    <% @pet.age %>
+  <div class="show-row flex-container">
+    <div class="flex-cell-2-3">
+      <h4><span>Name:</span> <%= @pet.name %></h4>
+      <h4><span>Type:</span> <%= @pet.pet_type %></h4>
+      <h4><span>Age:</span> <%= @pet.age %></h4>
+      <p><span>Description:</span> <%= @pet.description %></p>
+    </div>
+
+    <div class="flex-cell-1-3 flex-right">
+      <img src="<%= @pet.pic_url == nil ? @pet.pic_url : image_url("paw-print.png")%>">
+    </div>
+    <% if current_user.id == @pet.user_id %>
+      <%= link_to "Edit Pet", edit_pet_path(@pet), class: "btn" %>
+    <% end %>
   </div>
 </section>

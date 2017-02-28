@@ -24,7 +24,7 @@ nav {
 }
 
 .side-nav {
-  padding-top: 60px;
+  padding-top: 100px;
   position: fixed;
   height: 0%;
   width: 0px;
@@ -35,15 +35,15 @@ nav {
   text-align: center;
   a {
     display: block;
-    line-height: 100px;
+    line-height: 80px;
     font-size: 30px;
     font-family: tahoma;
     text-decoration: none;
-    margin-right: 20px;
     color: $color-2;
+    transition: all ease .3s;
   }
   a:hover {
-    color: $color-1;
+    background-color: $light-gray;
   }
 }
 

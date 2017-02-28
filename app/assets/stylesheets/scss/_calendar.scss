@@ -58,7 +58,8 @@
   .wday-6 {}
 
   .today {
-    background: #FFFFC0
+    background: $color-3;
+
   }
 
   .past {}
@@ -75,4 +76,16 @@
   .current-month {}
 
   .has-events {}
+}
+
+.calendar-heading {
+  text-align: center;
+  background: $light-gray;
+  padding: 5px 0;
+}
+
+.calendar-title {
+  font-size: $xlarge;
+  font-weight: bold;
+  margin: 0 30%;
 }
