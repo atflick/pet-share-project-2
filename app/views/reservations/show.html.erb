@@ -9,23 +9,33 @@
     <p><span>Details:</span> <%= @reservation.details %></p>
 
     <% if current_user.id == @reservation.created_by %>
-    <div class="flex-cell-full center">
-      <%= link_to "Update", edit_reservation_path(@reservation), class: "btn" %>
-    </div>
-    <% elsif current_user.id == @reservation.filled_by %>
-      <% if @reservation.start_time.to_date.past? %>
-        <%= link_to "Rate Caregiver", new_reservation_rating_path(@reservation), class: "btn" %>
+
+      <% if Rating.where("reservation_id = #{@reservation.id}").length != 0 %>
+        <h4>Thank you for submitting a review1</h4>
+      <% elsif @reservation.start_time.to_date.past? %>
+        <% if @reservation.filled_by != nil %>
+          <%= link_to "Rate Caregiver", new_reservation_rating_path(@reservation), class: "btn" %>
+        <% end %>
       <% else %>
+        <%= link_to "Update", edit_reservation_path(@reservation), class: "btn" %>
+      <% end %>
+
+    <% elsif current_user.id == @reservation.filled_by %>
+
+      <% if @reservation.start_time.to_date.future? %>
         <%= form_for @reservation do |f| %>
         <%= f.hidden_field :filled_by, :value => nil %>
         <%= f.submit "Cancel", class: "btn" %>
+        <% end %>
+      <% elsif Rating.where("reservation_id = #{@reservation.id}").length != 0 %>
+        <%= link_to "See Review", "/reservations/#{@reservation.id}/ratings/#{Rating.find_by(reservation_id: @reservation.id).id}", class: "btn" %>
+      <% else %>
+        <%= form_for @reservation do |f| %>
+        <%= f.hidden_field :filled_by, :value => current_user.id %>
+        <%= f.submit "Sign up!", class: "btn" %>
+        <% end %>
       <% end %>
-    <% end %>
-    <% else %>
-      <%= form_for @reservation do |f| %>
-      <%= f.hidden_field :filled_by, :value => current_user.id %>
-      <%= f.submit "Sign up!", class: "btn" %>
-      <% end %>
+
     <% end %>
   </div>
 </section>

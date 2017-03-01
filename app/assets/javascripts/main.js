@@ -1,3 +1,7 @@
+jQuery(function($){
+   $("#phone").mask("(999) 999-9999");
+   $("#user_phone").mask("(999) 999-9999");
+});
 
 $(document).ready(function() {
 

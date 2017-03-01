@@ -151,6 +151,9 @@ input[type=submit]:hover, .changes a:hover {
       margin-left: 12px;
     }
   }
+  .star-box {
+    margin-left: 12px;
+  }
 }
 
 .profile-pic {
@@ -175,7 +178,7 @@ input[type=submit]:hover, .changes a:hover {
   border: 1px solid $color-2;
   padding: 4px 10px;
   margin: 20px auto;
-  max-width: 120px;
+  max-width: 150px;
   text-align: center;
   transition: all ease .4s;
 }

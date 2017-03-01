@@ -18,8 +18,10 @@
       <%= link_to "Schedule", reservations_path %>
       <%= link_to "Users", users_path %>
       <%= link_to "Profile", "/users/#{current_user.id}"%>
-      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-      <%= current_user.email %>
+      <%= link_to "My Reviews", "/users/#{current_user.id}/reviews"%>
+      <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+      <h5>Signed in as</h5>
+      <h5><%=  current_user.email %></h5>
     <% end %>
   </div>
 

@@ -14,4 +14,5 @@
 //= require jquery_ujs
 
 //= require_tree .
+//= require_mask.js
 //= require_main.js

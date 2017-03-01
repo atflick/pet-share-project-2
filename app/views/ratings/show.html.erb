@@ -1,7 +1,7 @@
 <h2>User Rating</h2>
 <section>
   <div class="form">
-    <h4><span>Rating For:</span><%= User.find(@rating.owner_id).name_init %></h4>
+    <h4><span>Rating For:</span> <%= User.find(@rating.owner_id).name_init %></h4>
 
     <div class="star-box">
       <img src="<%= image_url("star.png") %>">
