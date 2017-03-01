@@ -140,30 +140,32 @@ input[type=submit]:hover, .changes a:hover {
     flex-direction: column;
     justify-content: center;
   }
-  div {
+  > div {
     display: flex;
-
     padding: 5px 0;
-
     h4, p {
       width: 100%;
       margin-left: 12px;
     }
-  }
-  img {
-    border: 1px solid $color-2;
-    width: 170px;
-    height: 170px;
-    object-fit: cover;
-    margin-right: 5px;
+    h6 {
+      margin-left: 12px;
+    }
   }
 }
 
-.show-row:nth-child(1) {
+.profile-pic {
+  border: 1px solid $color-2;
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  margin-right: 5px;
+}
+
+.show-row:nth-child(1n+0) {
   background: $trans-white;
 }
 
-.show-row:nth-child(2) {
+.show-row:nth-child(2n+0) {
   background: $almost-white;
 }
 

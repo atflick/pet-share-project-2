@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   }
 
   get "users/:id", :to =>  "users#show"
+  get "users/:id/reviews", :to =>  "users#reviews"
   get "users", :to =>  "users#index"
   get "landings/changes", :to =>  "landings#changes"
-  resources :reservations
-  resources :ratings
+  resources :reservations do
+    resources :ratings
+  end
   resources :pets, except: [:index]
 end

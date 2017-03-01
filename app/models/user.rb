@@ -13,4 +13,14 @@ class User < ApplicationRecord
   def name_init
     return "#{self.first_name.capitalize} #{self.last_name[0].capitalize}."
   end
+
+  def num_reviews
+    all_ratings = Rating.where("owner_id = #{self.id}").length
+  end
+
+  def avg_user_rating
+    all_ratings = Rating.where("owner_id = #{self.id}")
+    all_ratings.average(:stars).to_f / 5 * 100
+  end
+
 end

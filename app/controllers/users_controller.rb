@@ -9,4 +9,8 @@ class UsersController < ApplicationController
     @pets = Pet.where("user_id = #{params[:id]}")
   end
 
+  def reviews
+    @user = User.find(params[:id])
+    @reviews = Rating.where("owner_id = #{params[:id]}")
+  end
 end

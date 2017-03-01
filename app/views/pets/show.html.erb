@@ -8,7 +8,7 @@
     </div>
 
     <div class="flex-cell-1-3 flex-right">
-      <img src="<%= @pet.pic_url == nil ? @pet.pic_url : image_url("paw-print.png")%>">
+      <img src="<%= @pet.pic_url == nil ? @pet.pic_url : image_url("paw-print.png")%>" class="profile-pic">
     </div>
     <% if current_user.id == @pet.user_id %>
       <%= link_to "Edit Pet", edit_pet_path(@pet), class: "btn" %>

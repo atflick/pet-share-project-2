@@ -6,7 +6,7 @@ nav {
   text-align: center;
   display: flex;
   flex-direction: row;
-  z-index: 2;
+  z-index: 3;
 }
 
 .side-nav-head {
@@ -24,6 +24,7 @@ nav {
 }
 
 .side-nav {
+  z-index: 3;
   padding-top: 100px;
   position: fixed;
   height: 0%;
@@ -35,8 +36,8 @@ nav {
   text-align: center;
   a {
     display: block;
-    line-height: 80px;
-    font-size: 30px;
+    line-height: 60px;
+    font-size: 26px;
     font-family: tahoma;
     text-decoration: none;
     color: $color-2;

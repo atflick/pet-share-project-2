@@ -1,0 +1,22 @@
+<h2>Reviews for <%= @user.name_init %></h2>
+
+<section>
+  <% @reviews.each_with_index do |review, i| %>
+    <div class="show-row flex-container">
+
+      <div class="flex-cell-full">
+        <h4><span>Reviewer:</span> <%= User.find(review.reviewer_id).name_init %> </h4>
+        <div class="star-box">
+          <img src="<%= (i + 1) % 2 == 1 ? image_url('star-light.png') : image_url('star-dark.png') %>" class="star">
+          <img src="<%= (i + 1) % 2 == 1 ? image_url('star-light.png') : image_url('star-dark.png') %>" class="star">
+          <img src="<%= (i + 1) % 2 == 1 ? image_url('star-light.png') : image_url('star-dark.png') %>" class="star">
+          <img src="<%= (i + 1) % 2 == 1 ? image_url('star-light.png') : image_url('star-dark.png') %>" class="star">
+          <img src="<%= (i + 1) % 2 == 1 ? image_url('star-light.png') : image_url('star-dark.png') %>" class="star">
+          <div class="star-bar-show" style="width: <%= review.star_width %>%;"></div>
+        </div>
+        <h4><span>Comment:</span> <%= review.comment %></h4>
+      </div>
+
+    </div>
+  <% end %>
+</section>

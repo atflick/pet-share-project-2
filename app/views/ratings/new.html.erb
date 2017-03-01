@@ -1,0 +1,27 @@
+<h2>Rate Your Pet Caregiver</h2>
+<section>
+  <div class="form">
+    <h4>Name: <%= @caregiver.name_init %></h4>
+
+    <div class="star-box pointer">
+      <img src="<%= image_url("star.png") %>" id="star-1">
+      <img src="<%= image_url("star.png") %>" id="star-2">
+      <img src="<%= image_url("star.png") %>" id="star-3">
+      <img src="<%= image_url("star.png") %>" id="star-4">
+      <img src="<%= image_url("star.png") %>" id="star-5">
+      <div class="star-bar"></div>
+    </div>
+
+    <%= form_for [@reservation, @rating] do |f| %>
+
+    <%= f.hidden_field :reviewer_id, :value => current_user.id %>
+    <%= f.hidden_field :owner_id, :value => @reservation.filled_by %>
+    <%= f.hidden_field :stars, id: "star-val" %>
+
+    <%= f.label :comment %>
+    <%= f.text_area :comment %>
+
+    <%= f.submit "Add Rating", class: "btn"%>
+    <% end %>
+  </div>
+</section>

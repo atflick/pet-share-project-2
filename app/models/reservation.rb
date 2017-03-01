@@ -1,6 +1,6 @@
 class Reservation < ApplicationRecord
   belongs_to :user, :foreign_key => "created_by"
-  has_one :rating
+  has_many :ratings
 
   RES_TYPES = %w(Walk Feed Walk-Feed)
 

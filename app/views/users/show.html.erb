@@ -15,7 +15,7 @@
       </div>
 
       <div class="flex-cell-1-3 flex-right">
-        <img src="<%= @user.profile_pic_url == nil ? @user.profile_pic_url : image_url("blank-profile-picture.png")%>">
+        <img src="<%= @user.profile_pic_url == nil ? @user.profile_pic_url : image_url("blank-profile-picture.png")%>" class="profile-pic">
       </div>
       <%= link_to "Edit Profile", edit_user_registration_path, class: "btn" %>
     </div>
@@ -33,7 +33,7 @@
       </div>
 
       <div class="flex-cell-1-3 flex-right">
-        <img src="<%= pet.pic_url == nil ? pet.pic_url : image_url("paw-print.png")%>">
+        <img src="<%= pet.pic_url == nil ? pet.pic_url : image_url("paw-print.png")%>" class="profile-pic">
       </div>
       <% end %>
 

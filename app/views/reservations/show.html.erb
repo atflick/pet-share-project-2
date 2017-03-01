@@ -14,7 +14,7 @@
     </div>
     <% elsif current_user.id == @reservation.filled_by %>
       <% if @reservation.start_time.to_date.past? %>
-        <%= link_to "Rate Caregiver", new_rating_path, class: "btn" %>
+        <%= link_to "Rate Caregiver", new_reservation_rating_path(@reservation), class: "btn" %>
       <% else %>
         <%= form_for @reservation do |f| %>
         <%= f.hidden_field :filled_by, :value => nil %>
