@@ -23,12 +23,11 @@ main {
 
 body {
   font-family: $body-font;
-  // background: url(space-bg.jpg) fixed center;
   background-size: cover;
 }
 
 .background {
-  background: url(paw-bg.png) fixed repeat;
+  background: image-url("paw-bg.png") fixed repeat;
   height: 100%;
   width: 100%;
   opacity: .1;
