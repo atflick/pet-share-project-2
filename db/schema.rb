@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 20170226152916) do
     t.inet     "last_sign_in_ip"
     t.string   "first_name"
     t.string   "last_name"
-    t.bigint   "phone"
+    t.string   "phone"
     t.string   "address"
     t.string   "city"
     t.string   "state"

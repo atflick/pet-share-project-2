@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PetShareProject2</title>
+  <title>Pet, Care, Share.</title>
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+  <div class="background"></div>
   <div class="side-nav">
     <% if !current_user %>
       <%= link_to "Sign up", new_user_registration_path %>
@@ -43,8 +43,8 @@
   <main>
 
   <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <!-- <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> -->
   </main>
 
 </body>

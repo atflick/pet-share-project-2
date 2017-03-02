@@ -27,6 +27,15 @@ body {
   background-size: cover;
 }
 
+.background {
+  background: url(paw-bg.png) fixed repeat;
+  height: 100%;
+  width: 100%;
+  opacity: .1;
+  position: fixed;
+  z-index: -1;
+}
+
 main a {
   text-decoration: none;
   border-bottom: 1px solid $color-1;
@@ -149,6 +158,7 @@ input[type=submit]:hover, .changes a:hover {
     }
     h6 {
       margin-left: 12px;
+      margin-bottom: 5px;
     }
   }
   .star-box {
