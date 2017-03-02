@@ -1,6 +1,3 @@
-# pet-share-project-2
-Full-stack web application for dog walking and other pet care.
-
 # Project 2 - Pet, Care, Share.
 ## By Andy Flickinger
 
