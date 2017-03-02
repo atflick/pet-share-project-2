@@ -56,3 +56,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "simple_calendar", "~> 2.0"
 
 gem "rails_12factor", group: :production
+
+gem 'seed_dump'
