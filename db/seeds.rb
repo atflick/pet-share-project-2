@@ -13,15 +13,7 @@ Pet.create!([
   {name: "Missy", pic_url: "http://www.dogster.com/wp-content/uploads/2015/08/Jones425.jpg", pet_type: "Dog", birth_date: "2010-04-02", description: "Missy is a lab mix and a big sweetheart!  She enjoys long walks around the ballpark and fetching homeruns that I hit.", user_id: 4},
   {name: "Lassie", pic_url: "http://img03.deviantart.net/c51d/i/2011/056/a/5/just_lassie_by_hermio-d3ack7k.jpg", pet_type: "Dog", birth_date: "2015-01-30", description: "This is lassie", user_id: 5}
 ])
-Rating.create!([
-  {stars: 5, comment: "Andy did an awesome job!", owner_id: 1, reviewer_id: 4, reservation_id: 4},
-  {stars: 3, comment: "My dogs still had a lot of energy, curious if they were even walked?", owner_id: 1, reviewer_id: 2, reservation_id: 2},
-  {stars: 5, comment: "Good job man!", owner_id: 1, reviewer_id: 4, reservation_id: 7},
-  {stars: 1, comment: "One of my dogs peed in the house!!!!", owner_id: 4, reviewer_id: 2, reservation_id: 11},
-  {stars: 2, comment: "You forgot to feed them!!!", owner_id: 4, reviewer_id: 2, reservation_id: 10},
-  {stars: 3, comment: "Thanks man!", owner_id: 2, reviewer_id: 4, reservation_id: 8},
-  {stars: 3, comment: "Thanks bro!", owner_id: 2, reviewer_id: 4, reservation_id: 14}
-])
+
 Reservation.create!([
   {res_date: "2017-02-17", res_time: "2000-01-01 02:30:00", res_type: "Walk", start_time: "2017-02-17 02:30:00", created_by: 2, filled_by: 1, details: "walk my pups"},
   {res_date: "2017-02-08", res_time: "2000-01-01 16:00:00", res_type: "Walk", start_time: "2017-02-08 16:00:00", created_by: 1, filled_by: 4, details: "Walk Gibson, feed Billy 2 cups of food and give him a kong ball with peanut butter!!!!"},
@@ -38,4 +30,14 @@ Reservation.create!([
   {res_date: "2017-02-15", res_time: "2000-01-01 15:30:00", res_type: "Walk", start_time: "2017-02-15 15:30:00", created_by: 4, filled_by: 2, details: "Need my dog walked and fed."},
   {res_date: "2017-03-17", res_time: "2000-01-01 14:30:00", res_type: "Walk", start_time: "2017-03-17 14:30:00", created_by: 4, filled_by: nil, details: "Walk my dog!"},
   {res_date: "2017-03-18", res_time: "2000-01-01 13:30:00", res_type: "Walk-Feed", start_time: "2017-03-18 13:30:00", created_by: 2, filled_by: 4, details: "Walk Billy, feed Gibson"}
+])
+
+Rating.create!([
+  {stars: 5, comment: "Andy did an awesome job!", owner_id: 1, reviewer_id: 4, reservation_id: 4},
+  {stars: 3, comment: "My dogs still had a lot of energy, curious if they were even walked?", owner_id: 1, reviewer_id: 2, reservation_id: 2},
+  {stars: 5, comment: "Good job man!", owner_id: 1, reviewer_id: 4, reservation_id: 7},
+  {stars: 1, comment: "One of my dogs peed in the house!!!!", owner_id: 4, reviewer_id: 2, reservation_id: 11},
+  {stars: 2, comment: "You forgot to feed them!!!", owner_id: 4, reviewer_id: 2, reservation_id: 10},
+  {stars: 3, comment: "Thanks man!", owner_id: 2, reviewer_id: 4, reservation_id: 8},
+  {stars: 3, comment: "Thanks bro!", owner_id: 2, reviewer_id: 4, reservation_id: 14}
 ])
